@@ -2,7 +2,10 @@
     "manifest_version": 3,
     "name": "Tab3U",
     "description": "Tab(Free)U - Free transposition tool for Tab4U",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "icons": {
+        "128": "assets/icon128.png"
+    },
     "action": {
         "default_title": "Tab3U",
         "default_popup": "popup/popup.html"
