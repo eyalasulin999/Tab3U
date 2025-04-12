@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Tab3U",
+    "description": "Tab(Free)U - Free transposition tool for Tab4U",
+    "version": "0.0.1",
+    "action": {
+        "default_title": "Tab3U",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "transpose.js",
+                "content.js"
+            ],
+            "matches": [
+                "https://www.tab4u.com/*"
+            ]
+        }
+    ]
+}
