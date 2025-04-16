@@ -1,5 +1,7 @@
 # Tab3U
 
+## https://chromewebstore.google.com/detail/jnbkjlemlomecmccnppbknlnkelhfllh
+
 You may have browsed [Tab4U](https://www.tab4u.com) chords website, tried clicking that button
 
 ![EasyVersion](assets/easy_version.png)
