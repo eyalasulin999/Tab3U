@@ -11,7 +11,7 @@
         "default_popup": "popup/popup.html"
     },
     "permissions": [
-        "activeTab"
+        "activeTab", "scripting"
     ],
     "content_scripts": [
         {
@@ -23,5 +23,15 @@
                 "https://www.tab4u.com/*"
             ]
         }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "toolbar.css"
+            ],
+            "matches": [
+                "https://www.tab4u.com/*"
+            ]
+        }
     ]
-}
+    }

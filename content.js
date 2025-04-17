@@ -31,6 +31,42 @@ function transposeChords(semitones) {
     });
 }
 
+function createToolbar() {
+    // Create toolbar div
+    const songContent = document.getElementById("songContentTPL");
+    if (!songContent) {
+        return;
+    }
+    const toolbarElement = document.createElement("div");
+    toolbarElement.id = "tab3uToolbar";
+    songContent.insertBefore(toolbarElement, songContent.firstChild);
+
+    // CSS stylesheet link
+    const linkTag = document.createElement("link");
+    linkTag.rel = "stylesheet";
+    linkTag.href = chrome.runtime.getURL("toolbar.css");
+    toolbarElement.insertBefore(linkTag, toolbarElement.firstChild);
+
+    // Create the "+" button
+    const upButton = document.createElement('button');
+    upButton.id = 'transpose-up-btn';
+    upButton.textContent = '+';
+
+    // Create the label
+    const label = document.createElement('label');
+    label.id = 'current-transpose-label';
+    label.textContent = '__';
+
+    // Create the "−" button
+    const downButton = document.createElement('button');
+    downButton.id = 'transpose-down-btn';
+    downButton.textContent = '−';
+
+    toolbarElement.appendChild(upButton);
+    toolbarElement.appendChild(label);
+    toolbarElement.appendChild(downButton);
+}
+
 function init() {
     // GLOBALS
     window.global = window.global || {};
@@ -39,6 +75,9 @@ function init() {
 
     banner();
     chordsMapping();
+    if (global.chords.length) {
+        createToolbar();
+    }
 
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         switch (message.type) {
@@ -60,6 +99,8 @@ function init() {
 
         return true;
     });
+
+    
 }
 
 // Run init function
