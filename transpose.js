@@ -19,7 +19,7 @@ function transposeNote(note, semitones) {
 
 // Normalize a chord (example: Ebm --transpose--> Fbm --normalize--> Em)
 function normalizeChord(chord) {
-    const normalize = { "Cb": "B", "Db": "C#", "Eb": "D#", "Fb": "E", "Gb": "F#", "Ab": "G#", "Bb": "A#", "E#": "F", "B#": "C" };
+    const normalize = { "Cb": "B", "Db": "C#", "Eb": "D#", "Fb": "E", "Gb": "F#", "Ab": "G#", "Bb": "A#", "E#": "F", "B#": "C", "#b":"" };
 
     for (const key in normalize) {
         chord = chord.replace(key, normalize[key]);
