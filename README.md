@@ -1,6 +1,8 @@
-# Tab3U
+# DEPRECATED - CHECK OUT [Tab3U-NG](https://github.com/eyalasulin999/Tab3U-NG) OR https://tab3u.com
 
-## https://chromewebstore.google.com/detail/jnbkjlemlomecmccnppbknlnkelhfllh
+## Tab3U
+
+### https://chromewebstore.google.com/detail/jnbkjlemlomecmccnppbknlnkelhfllh
 
 You may have browsed [Tab4U](https://www.tab4u.com) chords website, tried clicking that button
 
